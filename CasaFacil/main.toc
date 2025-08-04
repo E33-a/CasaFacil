@@ -1,0 +1,64 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{1}{}%
+\contentsline {section}{\numberline {2}Objetivo general}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Objetivos específicos}{2}{}%
+\contentsline {section}{\numberline {3}Alcance del Sistema}{3}{}%
+\contentsline {section}{\numberline {4}Funcionalidades del Sistema}{4}{}%
+\contentsline {subsection}{\numberline {4.1}Autenticación y Gestión de Usuarios}{4}{}%
+\contentsline {subsection}{\numberline {4.2}Gestión de Propiedades}{4}{}%
+\contentsline {subsection}{\numberline {4.3}Búsqueda y Exploración}{5}{}%
+\contentsline {subsection}{\numberline {4.4}Interacción del Usuario}{5}{}%
+\contentsline {subsection}{\numberline {4.5}Pagos, Transacciones y Facturas}{5}{}%
+\contentsline {subsection}{\numberline {4.6}Panel de Administración}{6}{}%
+\contentsline {subsection}{\numberline {4.7}Servicios Complementarios}{6}{}%
+\contentsline {section}{\numberline {5}Roles del sistema}{7}{}%
+\contentsline {section}{\numberline {6}Modelo de negocio}{9}{}%
+\contentsline {subsection}{\numberline {6.1}Clasificación del Modelo de Negocio}{9}{}%
+\contentsline {subsubsection}{\numberline {6.1.1}Tipo Principal}{9}{}%
+\contentsline {paragraph}{Componentes Específicos}{9}{}%
+\contentsline {subsection}{\numberline {6.2}Segmentación de Mercado Específica}{9}{}%
+\contentsline {subsubsection}{\numberline {6.2.1}Análisis Detallado por Segmento}{9}{}%
+\contentsline {paragraph}{Segmento 1: Usuarios Ocasionales}{9}{}%
+\contentsline {paragraph}{Segmento 2: Propietarios Frecuentes}{9}{}%
+\contentsline {paragraph}{Segmento 3: Profesionales Inmobiliarios}{10}{}%
+\contentsline {subsection}{\numberline {6.3}Análisis Financiero Específico}{10}{}%
+\contentsline {subsubsection}{\numberline {6.3.1}Estructura de Ingresos Recurrentes}{10}{}%
+\contentsline {paragraph}{Análisis de Eficiencia por Propiedad}{10}{}%
+\contentsline {subsubsection}{\numberline {6.3.2}Mecanismos de Conversión por Limitaciones}{10}{}%
+\contentsline {paragraph}{Prueba Gratuita Estandar}{10}{}%
+\contentsline {paragraph}{De Prueba Gratuita a Bronce}{11}{}%
+\contentsline {paragraph}{De Bronce a Plata}{11}{}%
+\contentsline {paragraph}{De Plata a Oro}{11}{}%
+\contentsline {subsection}{\numberline {6.4}Análisis de Ventajas Competitivas}{11}{}%
+\contentsline {subsubsection}{\numberline {6.4.1}Diferenciación Tecnológica Específica}{11}{}%
+\contentsline {paragraph}{Evolución del Chatbot}{11}{}%
+\contentsline {subsubsection}{\numberline {6.4.2}Sistema de Posicionamiento Jerárquico}{12}{}%
+\contentsline {subsection}{\numberline {6.5}Análisis de Riesgos y Factores Críticos}{12}{}%
+\contentsline {subsubsection}{\numberline {6.5.1}Factores Críticos de Éxito Específicos}{12}{}%
+\contentsline {paragraph}{Métricas de Conversión Clave}{12}{}%
+\contentsline {subsubsection}{\numberline {6.5.2}Riesgos Específicos del Modelo}{12}{}%
+\contentsline {paragraph}{Riesgo de Saturación por Plan}{12}{}%
+\contentsline {paragraph}{Riesgo de Comunicación Limitada}{12}{}%
+\contentsline {subsection}{\numberline {6.6}Membresías}{13}{}%
+\contentsline {section}{\numberline {7}Requisitos Funcionales}{14}{}%
+\contentsline {section}{\numberline {8}Requisitos No Funcionales}{28}{}%
+\contentsline {section}{\numberline {9}Análisis de Componentes del Sistema \textit {Casa Fácil}}{31}{}%
+\contentsline {subsection}{\numberline {9.1}Cliente Móvil/Web}{31}{}%
+\contentsline {paragraph}{Permite:}{31}{}%
+\contentsline {paragraph}{Tecnologías:}{31}{}%
+\contentsline {subsection}{\numberline {9.2}Backend}{31}{}%
+\contentsline {paragraph}{Incluye:}{31}{}%
+\contentsline {paragraph}{Tecnologías:}{31}{}%
+\contentsline {subsection}{\numberline {9.3}Base de Datos}{32}{}%
+\contentsline {subsection}{\numberline {9.4}API de Pagos}{32}{}%
+\contentsline {subsection}{\numberline {9.5}Servicios de Mapas}{32}{}%
+\contentsline {subsection}{\numberline {9.6}Diagrama de Comunicación}{33}{}%
+\contentsline {section}{\numberline {10}Estilos Arquitectónicos}{34}{}%
+\contentsline {subsection}{\numberline {10.1}Microservicios}{34}{}%
+\contentsline {section}{\numberline {11}Patrones Arquitectónicos}{35}{}%
+\contentsline {section}{\numberline {12}Patrones de Diseño}{40}{}%
+\contentsline {section}{\numberline {13}Diagramas}{50}{}%
+\contentsline {subsection}{\numberline {13.1}Diagrama de componenes.}{50}{}%
+\contentsline {subsection}{\numberline {13.2}Diagrama de patrones y estilo.}{50}{}%
+\contentsline {subsection}{\numberline {13.3}Diagrama de Clases Inicial con Entidades Principales y Relaciones.}{51}{}%
+\contentsline {section}{\numberline {14}Resumen del Sistema}{52}{}%

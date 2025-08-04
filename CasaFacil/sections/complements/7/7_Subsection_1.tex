@@ -1,0 +1,56 @@
+\subsection*{\uppercase{Sección 1: Autenticación y Gestión de Usuarios}}
+\begin{requisito}{Registro de usuarios}
+	\item \textbf{Descripción:} El sistema permitirá a los nuevos usuarios registrarse mediante un formulario o servicios como Google o Facebook.
+	\item \textbf{Rol:} Usuario no autenticado.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Solicitud de Permisos (Scopes para obtener datos de 'profile' y 'email') en caso de utlizar OAuth.
+		\item Nombre de usuario (texto, obligatorio).
+		\item Correo electrónico (formato válido, obligatorio).
+		\item Contraseña (mínimo 8 caracteres que contengan un caracter especial y una mayúscula, obligatorio).
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Inicio de Sesión}
+	\item \textbf{Descripción:} El sistema permitirá a los usuarios iniciar sesión con sus credenciales. Al autenticarse, la aplicación generará un token único y temporal que permitirá el acceso a funcionalidades según su rol. Este token se eliminará al cerrar sesión para garantizar la seguridad, tambien el inicio de sesión se puede hacer mediante Facebook o Google.
+	\item \textbf{Rol:} Usuario autenticado.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Correo electrónico (obligatorio).
+		\item Contraseña (obligatorio).
+		\item Token de inicio de sesión.
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Recuperación de contraseña}
+	\item \textbf{Descripción:} El sistema permitirá a los usuarios registrados recuperar el acceso a su cuenta mediante un enlace enviado a su correo electrónico registrado.
+	\item \textbf{Rol:} Usuario autenticado.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Correo electrónico (obligatorio).
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Gestión de roles y permisos}
+	\item \textbf{Descripción:} El sistema permitirá diferenciar funcionalidades según el rol y el permiso (usuario autenticado, usuario no autenticado, propietario o administrador). Los administradores tendrán acceso completo, los propietarios gestionarán propiedades pero no usuarios ni configuración,los usuarios autenticados solo verán, gestionarán sus reservas y perfil, y los usuarios no autenticados solo podran mirar propiedades. Los usuarios con rol de administrador pueden tener diferentes permisos para promover la escalabilidad del sistema.
+	\item \textbf{Rol:} Todos los usuarios.
+	\item \textbf{Entradas esperadas:} 
+	\begin{itemize}
+		\item Acceso al sistema (obligatorio).
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Verificación de identidad del propietario}
+	\item \textbf{Descripción:} El sistema debe verificar la identidad del propietario como dueño o administrador del inmueble. La documentación será validada de forma inmediata por un sistema basado en inteligencia artificial que detectará y validará automáticamente la autenticidad y coincidencia de los datos ingresados. El sistema emitirá una respuesta en menos de 5 minutos. En caso de que los documentos sean ilegibles o no coincidan, se notificará al usuario con observaciones específicas para permitir la re-subida de la documentación.
+	\item \textbf{Rol:} Usuario con rol del Propietario.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Identificación oficial (INE, pasaporte, cartilla militar o cédula profesional).
+		\item Título de propiedad o documento que acredite la posesión legal del inmueble.
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Cierre de sesión seguro}
+	\item \textbf{Descripción:} El sistema permitirá a los usuarios cerrar su sesión de forma segura, eliminando el token de sesión activa del servidor y finalizando el acceso a recursos protegidos. Tras cerrar sesión, el usuario será redirigido a la pantalla home del sistema.
+	\item \textbf{Rol:} Usuario autenticado.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Solicitud de cierre de sesión (por clic en botón de cerrar sesión o inactividad).
+	\end{itemize}
+\end{requisito}
+\singlespacing

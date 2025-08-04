@@ -1,0 +1,80 @@
+\begin{landscape}
+	\begin{longtable}{|c|p{4cm}|p{5cm}|p{5cm}|p{6cm}|}
+		\caption{Entradas, validaciones y comportamientos.}
+		\label{tab:entradas} \\
+		\hline
+		\textbf{ID} & \textbf{Nombre} & \textbf{Entradas esperadas} & \textbf{Validaciones} & \textbf{Comportamiento del sistema} \\
+		\hline
+		\endfirsthead
+		\hline
+		\textbf{ID} & \textbf{Nombre} & \textbf{Entradas esperadas} & \textbf{Validaciones} & \textbf{Comportamiento del sistema} \\
+		\hline
+		\endhead
+		RF01 & Registro de usuarios & Nombre, correo, contraseña, OAuth scopes & Formato de correo, contraseña de más de 8 caracteres, campos obligatorios & Valida datos, crea cuenta, envía correo de verificación \\
+		\hline
+		RF02 & Inicio de sesión & Correo electrónico, contraseña o token de acceso & Correo registrado, contraseña válida, campos completos & Verifica autenticidad, genera token, inicia sesión, redirige según rol \\
+		\hline
+		RF03 & Recuperación de contraseña & Correo electrónico & Correo debe estar registrado & Genera token, envía correo con enlace de restablecimiento \\
+		\hline
+		RF04 & Gestión de roles y permisos & Acceso al sistema & Validación de credenciales & Determina acceso según rol y permisos \\
+		\hline
+		RF05 & Verificación de identidad del propietario & Identificación oficial, título de propiedad & Documentos válidos y correspondientes & Valida autenticidad y permite publicación si es verificado \\
+		\hline
+		RF06 & Cierre de sesión seguro & Solicitud de cierre de sesión & Debe haber sesión activa & Invalida sesión, destruye token, redirige a pantalla inicial \\
+		\hline
+		RF07 & Visualización de propiedades & Parámetros de consulta & Existencia de propiedades & Muestra listado con paginación o scroll infinito \\
+		\hline
+		RF08 & Detalles de propiedad & Identificador de propiedad & Existencia y estado activo & Muestra galería, descripción, precio y opciones de contacto \\
+		\hline
+		RF09 & Creación de propiedades & Datos de propiedad, título legal, fotos, reglas & Campos obligatorios, tipo de datos, peso/formato de imagen & Registra propiedad como activa o pendiente \\
+		\hline
+		RF10 & Edición y eliminación de propiedades & ID de propiedad, nuevos datos & Validación de permisos (admin/propietario) & Permite editar/eliminar y notifica si aplica \\
+		\hline
+		RF11 & Publicación programada & Datos de propiedad y fecha futura & Fecha debe ser futura & Programa publicación automática en fecha indicada \\
+		\hline
+		RF12 & Revisión por administrador & Lista de propiedades pendientes & Solo admin puede aprobar/rechazar & Muestra lista y permite decisión con notificación al propietario \\
+		\hline
+		RF13 & Búsqueda de propiedades & Términos, filtros avanzados & Filtros válidos y combinables & Resultados paginados/autocompletado \\
+		\hline
+		RF14 & Búsqueda en mapa interactivo & Ubicación base, criterios & Coordenadas y rango válidos & Muestra propiedades geolocalizadas como pines \\
+		\hline
+		RF15 & Búsqueda por cercanía a servicios & Tipo de servicio clave, distancia & Existencia del lugar de interés y validez del radio & Filtra por cercanía, destaca visualmente \\
+		\hline
+		RF16 & Favoritos & Identificador de propiedad & Evitar duplicados & Agrega/quita favoritos, muestra lista en perfil \\
+		\hline
+		RF17 & Solicitud de reserva & Propiedad, fecha, observaciones & Disponibilidad de propiedad & Envía solicitud, confirma visual y por correo \\
+		\hline
+		RF18 & Agendamiento de citas & Fecha, hora, tipo de cita & Disponibilidad del propietario & Registra cita, permite cancelar/reprogramar \\
+		\hline
+		RF19 & Reserva de propiedad & Selección de propiedad, medio de pago & Disponibilidad y autenticidad del pago & Confirma reserva y notifica al propietario \\
+		\hline
+		RF20 & Mensajería interna & Texto del mensaje, usuario destino & Longitud del mensaje & Guarda mensajes, muestra conversación cronológica \\
+		\hline
+		RF21 & Calificación y reseña & Valoración, comentario & Una reseña por transacción, modificable & Registra reseña, la muestra públicamente \\
+		\hline
+		RF22 & Reporte de usuarios o publicaciones & Motivo, ID de usuario o propiedad & Evitar duplicados & Registra y notifica a administrador \\
+		\hline
+		RF23 & Notificaciones internas y por correo & Acciones generadoras (mensajes, reservas, etc.) & Preferencias de notificación activas & Notifica en panel y por correo \\
+		\hline
+		RF24 & Opciones de pago & Método de pago (Mercado Pago, transferencia) & Validar método y fondos & Procesa pago, genera comprobante \\
+		\hline
+		RF25 & Generación de comprobante & ID de transacción & Usuario debe ser parte de la operación & Genera PDF, lo envía por correo y habilita descarga \\
+		\hline
+		RF26 & Historial de rentas & Acceso desde perfil & Autenticación válida & Muestra transacciones con comprobantes \\
+		\hline
+		RF27 & Gestión de reembolsos & Motivo, transacción & Dentro del plazo permitido & Registra solicitud y notifica para revisión \\
+		\hline
+		RF28 & Gestión de perfil & Datos personales, imagen & Formato y requisitos mínimos & Guarda cambios, confirma notificación \\
+		\hline
+		RF29 & Eliminación/desactivación de cuenta & Confirmación, motivo (opcional) & Confirmación doble, autenticación válida & Ejecuta acción, ofrece cancelación en 30 días \\
+		\hline
+		RF30 & Panel de administración & Credenciales de administrador & Validar rol antes de permitir acceso & Muestra panel, permite gestión CRUD y métricas \\
+		\hline
+		RF31 & Gestión de reportes de usuarios & Lista de reportes & Verificar si fue resuelto antes & Permite sanciones y registra historial \\
+		\hline
+		RF32 & Estadísticas por periodo & Fechas, categorías métricas & Fechas en formato válido & Muestra gráficos, permite exportación \\
+		\hline
+		RF33 & Exportación de datos y reportes & Tipo de reporte y formato & Permiso de exportación activo & Genera archivo, audita la acción \\
+		\hline
+	\end{longtable}
+\end{landscape}

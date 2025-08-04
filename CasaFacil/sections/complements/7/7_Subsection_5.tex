@@ -1,0 +1,34 @@
+\subsection*{\uppercase{Sección 5: Pagos, Transacciones y Facturas}}
+\begin{requisito}{Opciones de pago}
+	\item \textbf{Descripción:} El sistema permitirá a los usuarios realizar pagos mediante la pasarela de pago de Mercado Pago.
+	\item \textbf{Rol:} Usuario autenticado.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Selección del método de pago.
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Generación de comprobante}
+	\item \textbf{Descripción:} El sistema permitirá tras una transacción, generar un comprobante en PDF con los detalles el cuál puede ser descargado.
+	\item \textbf{Rol:} Usuario autenticado.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item ID de la transacción.
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Historial de rentas}
+	\item \textbf{Descripción:} El sistema permitirá al usuario consultar su historial de rentas.
+	\item \textbf{Rol:} Usuario autenticado.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Acceso al perfil o sección de historial.
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Gestión de reembolsos}
+	\item \textbf{Descripción:} El sistema permitirá a los usuarios solicitar reembolsos según las políticas establecidas.
+	\item \textbf{Rol:} Usuario autenticado.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Motivo del reembolso.
+		\item Transacción relacionada.
+	\end{itemize}
+\end{requisito}

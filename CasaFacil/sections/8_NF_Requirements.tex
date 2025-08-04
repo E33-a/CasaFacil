@@ -1,0 +1,133 @@
+\section{Requisitos No Funcionales}
+	\subsection*{RNF01. Compatibilidad del Sistema}
+		\begin{itemize}
+			\item \textbf{Descripción:} El sistema debe ser compatible y ejecutarse correctamente en plataformas basadas en Linux, Mac y Windows, garantizando su funcionamiento en versiones ampliamente usadas.
+			\item \textbf{Criterios de aceptación:}
+			\begin{itemize}
+				\item El sistema debe funcionar correctamente en distribuciones Linux modernas.
+				\item El sistema debe funcionar correctamente en versiones recientes de Windows.
+				\item El sistema debe funcionar correctamente en versiones recientes de Mac.
+			\end{itemize}
+		\end{itemize}
+	
+	\subsection*{RNF02. Seguridad del Sistema}
+		\begin{itemize}
+			\item \textbf{Descripción:} El sistema debe contar con mecanismos de seguridad que impidan el acceso a información crítica a usuarios no autorizados. Se deben implementar medidas de autenticación y autorización para proteger los datos.
+			\item \textbf{Criterios de aceptación:}
+			\begin{itemize}
+				\item Implementar autenticación segura para todos los usuarios.
+				\item Restringir el acceso a información sensible mediante autorización basada en roles.
+				\item Cifrado de contraseñas y datos sensibles almacenados.
+			\end{itemize}
+		\end{itemize}
+	
+	\subsection*{RNF03. Arquitectura y Tecnología}
+		\begin{itemize}
+			\item \textbf{Descripción:} El sistema debe desarrollarse con una arquitectura moderna que permita la separación clara entre lógica de negocio y presentación, utilizando frameworks actualizados y eficientes.
+			\item \textbf{Criterios de aceptación:}
+			\begin{itemize}
+				\item Backend implementado con un framework robusto y escalable.
+				\item Frontend compatible y bien integrado con el backend.
+				\item Comunicación eficiente y segura entre las capas.
+			\end{itemize}
+		\end{itemize}
+	
+	\subsection*{RNF04. Disponibilidad del Sistema}
+		\begin{itemize}
+			\item \textbf{Descripción:} El sistema debe estar disponible y operativo las 24 horas del día, los 7 días de la semana.
+			\item \textbf{Criterios de aceptación:}
+			\begin{itemize}
+				\item Disponibilidad mínima mensual del 99.9\%.
+				\item Plan de contingencia activo ante caídas o fallos.
+			\end{itemize}
+		\end{itemize}
+	
+	\subsection*{RNF05. Rendimiento del Sistema}
+		\begin{itemize}
+			\item \textbf{Descripción:} El sistema debe ser capaz de procesar grandes volúmenes de transacciones manteniendo tiempos de respuesta óptimos.
+			\item \textbf{Criterios de aceptación:}
+			\begin{itemize}
+				\item Tiempo de respuesta promedio menor a 2 segundos.
+				\item Soporte para múltiples usuarios concurrentes sin pérdida de datos.
+			\end{itemize}
+		\end{itemize}
+	
+	\subsection*{RNF06. Responsividad y Adaptabilidad}
+		\begin{itemize}
+			\item \textbf{Descripción:} El sistema debe ajustarse automáticamente a diferentes tamaños de pantalla y resoluciones.
+			\item \textbf{Criterios de aceptación:}
+			\begin{itemize}
+				\item Interfaz usable en smartphones, tablets y desktops.
+				\item Diseño responsivo y consistente en todos los dispositivos.
+			\end{itemize}
+		\end{itemize}
+	
+	\subsection*{RNF07. Mantenibilidad}
+		\begin{itemize}
+			\item \textbf{Descripción:} El sistema debe estar bien documentado, con código claro y comentado, y soporte para monitoreo y diagnóstico.
+			\item \textbf{Criterios de aceptación:}
+			\begin{itemize}
+				\item Documentación técnica actualizada.
+				\item Comentarios en al menos el 80\% del código.
+			\end{itemize}
+		\end{itemize}
+		
+	\subsection*{RNF08. Escalabilidad del Sistema}
+		\begin{itemize}
+			\item \textbf{Descripción:} El sistema debe poder adaptarse al crecimiento del modelo de negocio, número de usuarios, propiedades y transacciones sin degradar su rendimiento.
+			\item \textbf{Criterios de aceptación:}
+			\begin{itemize}
+				\item Arquitectura preparada para escalado horizontal y vertical.
+				\item Soporte para aumento de cargas sin rediseño profundo.
+			\end{itemize}
+		\end{itemize}
+	
+	\subsection*{RNF09. Accesibilidad}
+		\begin{itemize}
+			\item \textbf{Descripción:} El sistema debe cumplir con estándares de accesibilidad para que cualquier usuario, incluidas personas con discapacidad, pueda utilizarlo.
+			\item \textbf{Criterios de aceptación:}
+			\begin{itemize}
+				\item Compatibilidad con lectores de pantalla y navegación por teclado.
+				\item Contraste adecuado y etiquetas descriptivas en formularios.
+			\end{itemize}
+		\end{itemize}
+	
+	\subsection*{RNF10. Usabilidad}
+		\begin{itemize}
+			\item \textbf{Descripción:} La interfaz debe ser fácil de entender y usar, con flujos de usuario claros y retroalimentación inmediata.
+			\item \textbf{Criterios de aceptación:}
+			\begin{itemize}
+				\item Menús y botones intuitivos.
+				\item Asistencia o guías dentro de la plataforma.
+			\end{itemize}
+		\end{itemize}
+	
+	\subsection*{RNF11. Portabilidad}
+		\begin{itemize}
+			\item \textbf{Descripción:} El sistema debe poder desplegarse fácilmente en distintos entornos sin modificaciones significativas.
+			\item \textbf{Criterios de aceptación:}
+			\begin{itemize}
+				\item Soporte para contenedores o scripts de despliegue automático.
+				\item Compatibilidad con servicios en la nube o servidores locales.
+			\end{itemize}
+		\end{itemize}
+	
+	\subsection*{RNF12. Auditoría y Registro de Actividades}
+		\begin{itemize}
+			\item \textbf{Descripción:} El sistema debe registrar acciones relevantes (logins, errores, transacciones) para propósitos de auditoría y seguridad.
+			\item \textbf{Criterios de aceptación:}
+			\begin{itemize}
+				\item Registro de eventos con fecha, usuario y tipo de acción.
+				\item Visualización o exportación de logs desde el panel administrativo.
+			\end{itemize}
+		\end{itemize}
+		
+	\subsection*{RNF13. Localización e Internacionalización}
+		\begin{itemize}
+			\item \textbf{Descripción:} El sistema debe ser capaz de adaptarse a distintos idiomas y configuraciones regionales.
+			\item \textbf{Criterios de aceptación:}
+			\begin{itemize}
+				\item Soporte para múltiples idiomas desde el frontend.
+				\item Formatos de fecha, moneda y dirección adaptables por región.
+			\end{itemize}
+		\end{itemize}

@@ -1,0 +1,54 @@
+\section{Roles del sistema}
+	\noindent El sistema Casa Fácil se divide en varios roles para garantizar la seguridad, el control de acceso y la funcionalidad adecuada según el tipo de usuario. Los roles son los siguientes:
+	
+	\subsection*{Usuario no autenticado (Guest)}
+		\begin{itemize}
+			\item Puede explorar propiedades sin registrarse.
+			\item No puede interactuar con otros usuarios ni realizar acciones críticas (como reservas o publicaciones).
+			\item Solo tiene acceso a información pública y visualización de propiedades.
+		\end{itemize}
+	
+	\subsection*{Usuario autenticado (User)}
+		\begin{itemize}
+			\item Puede buscar y visualizar propiedades según filtros definidos (ubicación, precio, servicios).
+			\item Puede agregar propiedades a favoritos.
+			\item Puede enviar mensajes a los propietarios para solicitar más información.
+			\item Puede realizar reservas de inmuebles, siempre que estén disponibles.
+			\item Puede ver su historial de reservas y transacciones.
+			\item Puede calificar y dejar reseñas sobre propiedades al finalizar una reserva.
+			\item Puede agendar visitas presenciales o virtuales a propiedades.
+			\item Puede recibir notificaciones internas y por correo electrónico.
+		\end{itemize}
+	
+	\subsection*{Propietario (Owner)}
+		\begin{itemize}
+			\item Puede crear y gestionar sus propiedades, incluyendo edición y eliminación.
+			\item Puede subir imágenes, descripciones y especificaciones de cada propiedad.
+			\item Puede programar la fecha de publicación de sus propiedades.
+			\item Puede responder a mensajes de usuarios interesados en sus propiedades.
+			\item Puede ver el estado de disponibilidad de sus propiedades.
+			\item El número de propiedades que puede publicar está limitado según el paquete adquirido:
+			\begin{itemize}
+				\item Paquete Básico: 5 propiedades activas.
+				\item Paquete Estándar: 10 propiedades activas.
+				\item Paquete Premium: 15 propiedades activas.
+			\end{itemize}
+			\item Puede ver el historial de reservas y contactos relacionados con sus propiedades.
+		\end{itemize}
+	
+	\subsection*{Administrador (Admin)}
+		\begin{itemize}
+			\item Tiene permisos completos para gestionar usuarios, propiedades, reservas y transacciones.
+			\item Puede realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre usuarios, propiedades y transacciones.
+			\item Puede gestionar permisos y roles dentro del sistema.
+			\item Puede descargar información en diferentes formatos (CSV, PDF, Excel).
+			\item Puede revisar y moderar reportes de usuarios o propiedades.
+			\item Puede generar estadísticas y métricas del sistema.
+			\item El rol de administrador puede ser segmentado en niveles de permiso para escalabilidad:
+			\begin{itemize}
+				\item \textbf{Administrador General}: Acceso total a todas las funciones del sistema.
+				\item \textbf{Administrador de Contenido}: Solo gestiona propiedades, usuarios y reportes.
+				\item \textbf{Administrador de Seguridad}: Gestionar usuarios, roles y permisos.
+				\item \textbf{Administrador de Reportes}: Solo visualiza y genera informes.
+			\end{itemize}
+	\end{itemize}

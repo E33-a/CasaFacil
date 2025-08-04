@@ -1,0 +1,91 @@
+\section{Análisis de Componentes del Sistema \textit{Casa Fácil}}
+	\subsection{Cliente Móvil/Web}
+		\subsubsection*{Función}
+			Interfaz principal para usuarios (\textit{inquilinos}, \textit{propietarios}, \textit{administradores}).
+			\paragraph{Permite:}
+			\begin{itemize}
+				\item Búsqueda de propiedades con filtros avanzados (RF13, RF14).
+				\item Gestión de perfiles, reservas y mensajería interna (RF16, RF20).
+				\item Visualización de mapas interactivos (RF14) y detalles de propiedades (RF08).
+			\end{itemize}
+			
+			\paragraph{Tecnologías:} Angular 19 (frontend) para una SPA responsiva (RNF06).
+		
+		\subsubsection*{Comunicación}
+			\begin{itemize}
+				\item Se conecta al Backend mediante APIs REST/HTTP (RF24).
+				\item Consume servicios externos:
+				\begin{itemize}
+					\item \textbf{MapLibre} para geolocalización (RF14).
+					\item \textbf{MercadoPago} para transacciones (RF24).
+				\end{itemize}
+			\end{itemize}
+	
+	\subsection{Backend}
+		\subsubsection*{Función}
+			Procesa la lógica de negocio y gestiona los datos.
+			
+			\paragraph{Incluye:}
+			\begin{itemize}
+				\item Autenticación (JWT/OAuth) y autorización por roles (RF01, RF04).
+				\item Gestión de propiedades (CRUD, validación) (RF09, RF10).
+				\item Procesamiento de pagos (RF24) y generación de comprobantes (RF25).
+				\item Mensajería en tiempo real con Socket.IO (RF20).
+			\end{itemize}
+			
+			\paragraph{Tecnologías:} Django 4.2 (Python) para APIs REST (RNF03).
+			
+		\subsubsection*{Comunicación}
+			\begin{itemize}
+				\item API Gateway (Nginx + Django) centraliza solicitudes del cliente.
+				\item Interactúa con:
+				\begin{itemize}
+					\item Bases de datos (PostgreSQL, MongoDB, Redis).
+					\item Servicios externos (MercadoPago, MapLibre).
+				\end{itemize}
+			\end{itemize}
+	
+	\subsection{Base de Datos}
+		\subsubsection*{Función}
+			Almacenamiento estructurado y no estructurado.
+			\begin{itemize}
+				\item \textbf{PostgreSQL:} Datos relacionales (usuarios, propiedades, transacciones).
+				\item \textbf{MongoDB:} Datos no estructurados (mensajes de chat, logs).
+				\item \textbf{Redis:} Caché y sesiones (RNF05).
+			\end{itemize}
+	
+		\subsubsection*{Comunicación}
+			El Backend accede mediante ORM de Django o drivers específicos.
+	
+	\subsection{API de Pagos}
+		\subsubsection*{Función}
+			Procesa transacciones seguras (RF24) y gestiona reembolsos (RF27).
+			
+			\begin{itemize}
+				\item Integración con MercadoPago como pasarela externa.
+			\end{itemize}
+		
+		\subsubsection*{Comunicación}
+			El Backend envía solicitudes de pago (HTTPS) y recibe confirmaciones.
+	
+	\subsection{Servicios de Mapas}
+		\subsubsection*{Función}
+			Geolocalización de propiedades y búsqueda por cercanía (RF14, RF15).
+			
+			\begin{itemize}
+				\item \textbf{Tecnología:} MapLibre GL JS (open-source).
+			\end{itemize}
+	
+		\subsubsection*{Comunicación}
+			\begin{itemize}
+				\item El cliente consume directamente la API de mapas (JavaScript).
+				\item El Backend valida coordenadas y direcciones.
+			\end{itemize}
+	
+	\newpage
+	\subsection{Diagrama de Comunicación}
+		\begin{center}
+			\includegraphics[width=\linewidth]{figures/diagrams/Diagrama de Comunicación.png}
+			\captionof{figure}{Diagrama de Comunicación.}
+			\label{fig:img1}
+		\end{center}

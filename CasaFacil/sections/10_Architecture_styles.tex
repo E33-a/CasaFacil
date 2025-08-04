@@ -1,0 +1,15 @@
+\section{Estilos Arquitectónicos}
+	\subsection{Microservicios}
+		\noindent El estilo arquitectónico basado en \textbf{microservicios} consiste en dividir una aplicación en múltiples servicios pequeños, autónomos y especializados, que se comunican entre sí generalmente a través de APIs.
+		\noindent Esto permite que cada uno de estos servicios pueda desarrollarse, implementarse, operarse y actualizarse sin afectar el funcionamiento de otros servicios del sistema. Una aplicación basada en microservicios facilita el mantenimiento y testeo de cada servicio, permitiendo implementar cambios y revertirlos en caso de ser necesario.
+		\noindent Para una plataforma como \textit{Casa Fácil}, donde el sistema requiere diversas funcionalidades que pueden operar de forma autónoma, la arquitectura de microservicios permite dividir el sistema en módulos especializados, tales como:
+		
+		\begin{itemize}
+			\item \textbf{Servicio de cuentas:} Gestión de usuarios, roles, autenticación y perfil.
+			\item \textbf{Servicio de pago:} Procesamiento de pagos e integración con Mercado Pago.
+			\item \textbf{Servicio de carrito de compra:} Manejo de reservas e historial de inmuebles guardados.
+			\item \textbf{Servicio de mapas:} Búsqueda geolocalizada y ubicación de propiedades.
+			\item \textbf{Servicio de mensajería:} Comunicación entre arrendadores y arrendatarios.
+		\end{itemize}
+		
+		\noindent El uso del modelo de microservicios en \textit{Casa Fácil} permite una organización modular, escalable y mantenible del sistema. Además, al combinarse con una \textbf{arquitectura orientada a eventos (EDA)}, se potencia aún más la reactividad, flexibilidad y eficiencia del desarrollo, permitiendo que los servicios interactúen de forma desacoplada y fluida, adaptándose al crecimiento futuro del proyecto.

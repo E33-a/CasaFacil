@@ -1,0 +1,51 @@
+\subsection*{\uppercase{Sección 2: Gestión de Propiedades}}
+\begin{requisito}{Visualización de propiedades}
+	\item \textbf{Rol:} Usuario autenticado o no autenticado.
+	\item \textbf{Descripción:} El sistema permitirá a los usuarios  ver las propiedades disponibles en la plataforma con información básica (precio, disponibillidad).
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Parámetros de consulta (ubicación, tipo, orden, precio).
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Detalles de propiedad}
+	\item \textbf{Descripción:} El sistema permitirá seleccionar una propiedad, se mostrará su información, incluyendo galería (extendida), descripción, precio, ubicación, subcategorías y reseñas. 
+	\item \textbf{Rol:} Usuario autenticado o no autenticado.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Identificador de la propiedad.
+	\end{itemize}
+	
+\end{requisito}
+\begin{requisito}{Creación de propiedades}
+	\item \textbf{Descripción:} El sistema permitirá a los usuarios con los permisos adecuados registrar una nueva propiedad para rentar.
+	\item \textbf{Rol:} Usuario con rol de propietario.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Datos de la propiedad: título, descripción, tipo, categoría, ubicación, reglas, fotos, precio, título de la propiedad (o documento que valide al propietario, solo para validación).
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Edición y eliminación de propiedades}
+	\item \textbf{Descripción:} El sistema permitirá a los propietarios o administradores modificar o eliminar propiedades previamente publicadas (únicamente las de su pertenencia).
+	\item \textbf{Rol:} Usuario con rol de propietario o administrador.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Identificador de la propiedad, nuevos datos.
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Publicación programada de propiedades}
+	\item \textbf{Descripción:} El sistema permitirá que los propietarios seleccionen una fecha futura para la publicación automática de sus propiedades.
+	\item \textbf{Rol:} Usuario con rol propietario.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Datos de la propiedad y fecha programada.
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Revisión/moderación de propiedades por administrador}
+	\item \textbf{Descripción:} El sistema permitirá que las propiedades registradas sean revisadas por un administrador antes de ser visibles en la plataforma.
+	\item \textbf{Rol:} Usuario con rol Administrador.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Lista de propiedades en estado “pendiente”.
+	\end{itemize}
+	\item \textbf{Validaciones:}
+\end{requisito}

@@ -1,0 +1,70 @@
+\subsection*{\uppercase{Sección 4: Interacción del Usuario}}
+\begin{requisito}{Favoritos}
+	\item \textbf{Descripción:} El sistema permitirá a los usuarios marcar propiedades como favoritas para acceder fácilmente a ellas.
+	\item \textbf{Rol:} Usuario autenticado.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Identificador de la propiedad.
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Solicitud de reserva}
+	\item \textbf{Descripción:} El sistema permitirá a los usuarios autenticados (no porpietarios ni administradores) enviar una solicitud para reservar una propiedad.
+	\item \textbf{Rol:} Usuario autenticado.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Propiedad seleccionada.
+		\item Fecha deseada y observaciones (opcional).
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Agendamiento de citas}
+	\item \textbf{Descripción:} El sistema permitirá a los usuarios  agendar visitas presenciales o virtuales con los propietarios.
+	\item \textbf{Rol:} Usuario autenticado.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Fecha, hora, tipo de cita (presencial o virtual).
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Reserva de propiedad}
+	\item \textbf{Descripción:} El sistema permitirá a los usuarios  reservar temporalmente una propiedad mediante pago anticipado.
+	\item \textbf{Rol:} Usuario autenticado.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Selección de propiedad.
+		\item Medio de pago.
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Mensajería interna}
+	\item \textbf{Descripción:} El sistema permitirá a los usuarios enviar mensajes a los propietarios directamente desde la plataforma y viceversa atentiendo al modelo de negocio y las mebresías.
+	\item \textbf{Rol:} Usuario autenticado y usuario con rol de administrador.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Texto del mensaje.
+		\item Usuario destinatario (propietario).
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Calificación y reseña}
+	\item \textbf{Descripción:} El sistema permitirá a los usuarios  calificar y dejar reseñas después de completar una transacción.
+	\item \textbf{Rol:} Usuario autenticado.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Valoración (número de estrellas).
+		\item Comentario textual (opcional).
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Reporte de usuarios o publicaciones}
+	\item \textbf{Descripción:} El sistema permitirá a los usuarios reportar publicaciones sospechosas o usuarios con comportamiento inapropiado mediante un formulario.
+	\item \textbf{Rol:} Usuario autenticado.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Motivo del reporte.
+		\item ID del usuario o propiedad reportada.
+	\end{itemize}
+\end{requisito}
+\begin{requisito}{Notificaciones internas y por correo}
+	\item \textbf{Descripción:} El sistema permitirá enviar notificaciones relevantes dentro de la aplicación y por medio de correo electrónico.
+	\item \textbf{Rol:} Usuario autenticado.
+	\item \textbf{Entradas esperadas:}
+	\begin{itemize}
+		\item Acciones generadoras (mensajes, reservas, aprobaciones, cancelaciones, denuncias).
+	\end{itemize}
+\end{requisito}

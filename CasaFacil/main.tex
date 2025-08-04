@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+
+% ===== CONFIG =====
+\input{config/preamble}
+
+\begin{document}
+	
+	% ===== PORTADA =====
+	\input{cover/cover}
+	
+	% ===== ÍNDICES =====
+	\tableofcontents
+	\newpage
+	\listoffigures
+	\newpage
+	\listoftables
+	\newpage
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+	
+	% ===== CONTENIDO =====
+	\input{sections/1_Introduction.tex} \newpage
+	\input{sections/2_Objective.tex} \newpage
+	\input{sections/3_Scope.tex} \newpage
+	\input{sections/4_Functionalities.tex} \newpage
+	\input{sections/5_Roles.tex} \newpage
+	\input{sections/6_Business_model.tex} \newpage
+	\input{sections/7_F_Requirements.tex} \newpage
+	\input{sections/8_NF_Requirements.tex} \newpage
+	\input{sections/9_Component_analysis.tex} \newpage
+	\input{sections/10_Architecture_styles.tex} \newpage
+	\input{sections/11_Architecture_patterns.tex} \newpage
+	\input{sections/12_Design_patterns.tex} \newpage
+	\input{sections/13_Diagrams.tex} \newpage
+	\input{sections/14_Summary.tex} \newpage
+	
+	% ===== ANEXOS =====
+%	\appendix
+%	\input{secciones/anexo_a}
+	
+\end{document}

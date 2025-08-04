@@ -1,0 +1,50 @@
+\section{Mapa de riesgos}
+	\begin{table}[H]
+		\centering
+		\small
+		\caption{Matriz de Riesgos IPER}
+		\renewcommand{\arraystretch}{2.8}
+		\rowcolors{2}{rowgray}{white}
+		\begin{tabularx}{\textwidth}{|
+				>{\centering\arraybackslash}m{0.8cm}|
+				>{\centering\arraybackslash}m{2.5cm}|
+				>{\centering\arraybackslash}m{1.2cm}|
+				>{\centering\arraybackslash}m{1.5cm}|
+				>{\centering\arraybackslash}m{2.7cm}|
+				>{\centering\arraybackslash}m{1.2cm}|
+				>{\centering\arraybackslash}m{3.5cm}|}
+			\hline
+			\rowcolor{headerblue}
+			\color{white}\textbf{ID} &
+			\color{white}\textbf{Riesgo} &
+			\color{white}\textbf{Prob.} &
+			\color{white}\textbf{Exposición} &
+			\color{white}\textbf{Resultado} &
+			\color{white}\textbf{Nivel} &
+			\color{white}\textbf{Acciones} \\
+			\hline
+			R1 & Fallo en pasarela de pagos & Media & Alta & Sin reserva & \cellcolor{mediumrisk}Alto & Backup de pagos + logs \\
+			\hline
+			R2 & Pico de tráfico & Alta & Alta & Caída de sistema & \cellcolor{highrisk}Crítico & Escalado + CDN \\
+			\hline
+			R3 & Fuga de datos & Media & Muy Alta & Daño reputacional & \cellcolor{highrisk}Crítico & Cifrado + roles \\
+			\hline
+			R4 & API de mapas cae & Baja & Media & No se muestra ubicación & \cellcolor{lowrisk}Medio & Vista alternativa \\
+			\hline
+			R5 & Cambio de requerimientos & Alta & Media & Retraso de entregas & \cellcolor{mediumrisk}Alto & Control de versiones \\
+			\hline
+			R6 & Desincronización servicios & Media & Alta & Fallos funcionales & \cellcolor{mediumrisk}Alto & Patrón Saga \\
+			\hline
+			R7 & Abuso de mensajes & Alta & Media & Saturación de sistema & \cellcolor{lowrisk}Medio & Límite por membresía \\
+			\hline
+		\end{tabularx}
+	\end{table}
+	
+	\vspace{1em}
+	\begin{center}
+		\textbf{Leyenda:} \\[0.5em]
+		\colorbox{highrisk}{\strut \hspace{1em}} Riesgo Crítico \hspace{1em}
+		\colorbox{mediumrisk}{\strut \hspace{1em}} Riesgo Alto \hspace{1em}
+		\colorbox{lowrisk}{\strut \hspace{1em}} Riesgo Medio
+	\end{center}
+

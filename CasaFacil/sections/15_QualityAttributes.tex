@@ -1,0 +1,100 @@
+\section{Identificación de atributos de calidad}
+	\subsection{Rendimiento (Performance)}
+		\subsubsection*{Definición}
+			\noindent Capacidad del sistema para responder en tiempos aceptables bajo distintas condiciones de carga.
+		
+		\subsubsection*{Características claves}
+			\begin{itemize}
+				\item Tiempo de respuesta menor a 2 segundos en operaciones críticas.
+				\item Capacidad para manejar múltiples usuarios concurrentes y búsquedas simultáneas.
+				\item Optimización de imágenes y mapas mediante Lazy Loading.
+			\end{itemize}
+		
+		\subsubsection*{Evidencia en el sistema}
+			\begin{itemize}
+				\item Arquitectura basada en microservicios permite distribuir la carga.
+				\item Uso de Redis para cacheo de sesiones y consultas frecuentes.
+				\item Separación de comandos y consultas con CQRS mejora eficiencia.
+			\end{itemize}
+	
+	\subsection{Disponibilidad}
+		\subsubsection*{Definición}
+			\noindent Tiempo en que el sistema se mantiene operativo.
+		
+		\subsubsection*{Características claves}
+			\begin{itemize}
+				\item Alta disponibilidad: 99.9\% operativo al mes.
+				\item Soporte 24/7 por ser un sistema de renta de propiedades.
+			\end{itemize}
+		
+		\subsubsection*{Evidencia en el sistema}
+			\begin{itemize}
+				\item Arquitectura con posibilidad de escalado automático.
+				\item Sistema de failover mediante balanceadores y monitoreo.
+			\end{itemize}
+	
+	\newpage
+	\subsection{Seguridad}
+		\subsubsection*{Definición}
+			\noindent Protección de datos e integridad del sistema frente a accesos no autorizados.
+		
+		\subsubsection*{Características claves}
+			\begin{itemize}
+				\item Uso de OAuth y JWT para autenticación y sesiones seguras.
+				\item Cifrado de datos sensibles como contraseñas y transacciones.
+				\item Validación de identidad con verificación automática vía IA.
+			\end{itemize}
+	
+		\subsubsection*{Evidencia en el sistema}
+			\begin{itemize}
+				\item Gestión de roles y permisos por usuario.
+				\item Auditoría de logs y eventos relevantes.
+			\end{itemize}
+	
+	\subsection{Escalabilidad}
+		\subsubsection*{Definición}
+			\noindent Capacidad de adaptarse a un crecimiento en usuarios, datos y servicios.
+		
+		\subsubsection*{Características claves}
+			\begin{itemize}
+				\item Escalado horizontal y vertical según necesidades.
+				\item Uso de contenedores (Docker) y despliegues independientes.
+			\end{itemize}
+		
+		\subsubsection*{Evidencia en el sistema}
+			\begin{itemize}
+				\item Separación de servicios: búsqueda, pagos, mensajería, etc.
+				\item Soporte para planes de crecimiento (modelo Freemium/Oro).
+			\end{itemize}
+	
+	\subsection{Mantenibilidad}
+		\subsubsection*{Definición}
+			\noindent Facilidad para realizar correcciones, mejoras o adaptaciones al sistema.
+		
+		\subsubsection*{Características claves}
+			\begin{itemize}
+				\item Código basado en principios SOLID.
+				\item Aplicación de patrones de diseño como Strategy, Singleton, Factory, Repository.
+				\item Documentación técnica clara y actualizada.
+			\end{itemize}
+	
+	\subsection{Usabilidad}
+		\subsubsection*{Definición}
+			\noindent Facilidad con la que los usuarios interactúan con el sistema.
+		
+		\subsubsection*{Características claves}
+			\begin{itemize}
+				\item Interfaz responsiva y clara (SPA con Angular).
+				\item Asistencia visual, flujos de usuario intuitivos, notificaciones claras.
+			\end{itemize}
+	
+	\subsection{Accesibilidad}
+		\subsubsection*{Definición}
+			\noindent Capacidad del sistema para ser utilizado por personas con discapacidades.
+		
+		\subsubsection*{Características claves}
+			\begin{itemize}
+				\item Navegación por teclado.
+				\item Compatibilidad con lectores de pantalla.
+				\item Contraste de colores y etiquetas descriptivas.
+			\end{itemize}

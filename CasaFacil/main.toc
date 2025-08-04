@@ -62,3 +62,21 @@
 \contentsline {subsection}{\numberline {13.2}Diagrama de patrones y estilo.}{50}{}%
 \contentsline {subsection}{\numberline {13.3}Diagrama de Clases Inicial con Entidades Principales y Relaciones.}{51}{}%
 \contentsline {section}{\numberline {14}Resumen del Sistema}{52}{}%
+\contentsline {section}{\numberline {15}Identificación de atributos de calidad}{56}{}%
+\contentsline {subsection}{\numberline {15.1}Rendimiento (Performance)}{56}{}%
+\contentsline {subsection}{\numberline {15.2}Disponibilidad}{56}{}%
+\contentsline {subsection}{\numberline {15.3}Seguridad}{57}{}%
+\contentsline {subsection}{\numberline {15.4}Escalabilidad}{57}{}%
+\contentsline {subsection}{\numberline {15.5}Mantenibilidad}{57}{}%
+\contentsline {subsection}{\numberline {15.6}Usabilidad}{58}{}%
+\contentsline {subsection}{\numberline {15.7}Accesibilidad}{58}{}%
+\contentsline {section}{\numberline {16}Evaluación de Riesgos}{59}{}%
+\contentsline {subsection}{\numberline {16.1}Identificación de riesgos}{59}{}%
+\contentsline {subsection}{\numberline {16.2}Análisis de Riesgos}{60}{}%
+\contentsline {subsection}{\numberline {16.3}Planes de Mitigación}{61}{}%
+\contentsline {subsection}{\numberline {16.4}Monitoreo y Control}{62}{}%
+\contentsline {subsection}{\numberline {16.5}Documentación}{62}{}%
+\contentsline {section}{\numberline {17}Estrategia de Escalabilidad}{63}{}%
+\contentsline {section}{\numberline {18}Plan de Pruebas}{65}{}%
+\contentsline {section}{\numberline {19}Diagrama de Escalabilidad}{67}{}%
+\contentsline {section}{\numberline {20}Mapa de riesgos}{69}{}%

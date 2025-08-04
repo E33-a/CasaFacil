@@ -1,0 +1,96 @@
+\section{Evaluación de Riesgos}
+	\subsection{Identificación de riesgos}
+		\subsubsection*{Métodos utilizados}
+			\begin{itemize}
+				\item Revisión de documentación del proyecto.
+				\item Análisis de funcionalidades y arquitectura.
+				\item Revisión de experiencias anteriores.
+			\end{itemize}
+		
+		\subsubsection*{Taxonomía aplicada}
+			\begin{itemize}
+				\item Técnicos, humanos, operativos y de negocio.
+			\end{itemize}
+	
+	\begin{table}[H]
+		\centering
+		\caption{Identificación de Riesgos}
+		\begin{tabularx}{\textwidth}{|c|X|X|X|}
+			\hline
+			\textbf{ID} & \textbf{Riesgo} & \textbf{Categoría} & \textbf{Método de identificación} \\
+			\hline
+			R1 & Fallo en pasarela de pagos (MercadoPago) & Técnico & Revisión de dependencias externas \\
+			R2 & Picos de tráfico en campañas & Técnico / Operativo & Lecciones aprendidas \\
+			R3 & Fuga de datos de usuarios & Seguridad / Legal & Revisión de requisitos no funcionales \\
+			R4 & Pérdida de disponibilidad de API de mapas & Técnico / Externo & Consulta con expertos \\
+			R5 & Cambios inesperados en requerimientos & Negocio & Brainstorming de equipo \\
+			R6 & Desincronización entre microservicios & Técnico / Arquitectónico & Análisis de diseño \\
+			R7 & Conflictos por uso excesivo del sistema de mensajes & Operativo / Usuario & Proyectos anteriores \\
+			\hline
+		\end{tabularx}
+	\end{table}
+	
+	\subsection{Análisis de Riesgos}
+		\begin{table}[H]
+			\centering
+			\caption{Análisis de Riesgos}
+			\begin{tabularx}{\textwidth}{|c|c|c|c|X|}
+				\hline
+				\textbf{ID} & \textbf{Probabilidad} & \textbf{Impacto} & \textbf{Nivel de riesgo} & \textbf{Justificación} \\
+				\hline
+				R1 & Media & Alta & Alto & Los errores o caídas impiden realizar transacciones, lo que puede derivar en pérdidas económicas y frustración del usuario. \\
+				\hline
+				R2 & Alta & Alta & Crítico & Puede provocar la caída del sistema o tiempos de respuesta excesivos en momentos clave. \\
+				\hline
+				R3 & Media & Muy Alta & Crítico & Implica responsabilidad legal, pérdida de confianza y daño a la reputación del proyecto. \\
+				\hline
+				R4 & Baja & Media & Moderado & Aunque afecta la visualización, no bloquea funcionalidades clave; puede mitigarse con un fallback. \\
+				\hline
+				R5 & Alta & Media & Alto & Afectan planificación, costos y alcance; común en proyectos con múltiples partes interesadas. \\
+				\hline
+				R6 & Media & Alta & Alto & Puede generar inconsistencias en los datos o en la lógica de negocio distribuida. \\
+				\hline
+				R7 & Alta & Media & Alto & Podría saturar el sistema o ser utilizado de forma abusiva si no se limita o modera correctamente. \\
+				\hline
+			\end{tabularx}
+		\end{table}
+	
+	\subsection{Planes de Mitigación}
+		\begin{table}[H]
+			\centering
+			\caption{Planes de Mitigación}
+			\begin{tabularx}{\textwidth}{|c|X|X|X|}
+				\hline
+				\textbf{ID} & \textbf{Estrategia de Mitigación} & \textbf{Plan de Contingencia} & \textbf{Responsable} \\
+				\hline
+				R1 & Validar pagos en tiempo real y con logs & Permitir reintento, enviar aviso al admin & Equipo Backend \\
+				\hline
+				R2 & Escalabilidad horizontal + CDN & Activar instancias en AWS autoscaling & Arquitecto DevOps \\
+				\hline
+				R3 & Cifrado + roles estrictos + IA para verificación & Auditoría automatizada + alerta de incidentes & Encargado de seguridad \\
+				\hline
+				R4 & Fallback visual sin mapa + mensaje informativo & Interfaz sin mapa activa con coordenadas & Equipo Frontend \\
+				\hline
+				R5 & Contrato de cambios controlados (Scope Creep) & Reuniones semanales con stakeholders & Scrum Master \\
+				\hline
+				R6 & Implementación de patrón Saga + mensajería asincrónica & Registro de eventos para rollback & Equipo de Arquitectura \\
+				\hline
+				R7 & Limitar mensajes por membresía & Alertas por spam y monitoreo de abuso & Soporte / Moderación \\
+				\hline
+			\end{tabularx}
+		\end{table}
+	
+	\newpage
+	\subsection{Monitoreo y Control}
+	\begin{itemize}
+		\item Revisión semanal de riesgos en reunión de seguimiento.
+		\item Matriz de riesgos IPER actualizada.
+		\item Uso de sistemas de logging y herramientas como Trello, Jira o Notion.
+	\end{itemize}
+	
+	\subsection{Documentación}
+	\begin{itemize}
+		\item Información centralizada en un documento en la nube.
+		\item Uso de etiquetas por tipo de riesgo y fase del proyecto.
+		\item Herramientas sugeridas: Notion, Jira, GitHub Projects.
+	\end{itemize}

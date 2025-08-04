@@ -1,0 +1,90 @@
+\section{Plan de Pruebas}
+	\subsection*{Objetivos del Plan de Pruebas}
+	\begin{itemize}
+		\item Verificar funcionalidad de microservicios individuales.
+		\item Detectar errores en etapas tempranas.
+		\item Validar integridad de datos.
+		\item Comprobar comportamiento ante entradas válidas e inválidas.
+		\item Asegurar correcto funcionamiento aislado de cada módulo.
+	\end{itemize}
+	
+	\subsection*{Microprocesos Críticos a Validar}
+	\begin{itemize}
+		\item \textbf{Cuentas:} Registro e inicio de sesión (JWT, validación).
+		\item \textbf{Propiedades:} Creación, edición y moderación.
+		\item \textbf{Reservas:} Disponibilidad, confirmación, rechazo.
+		\item \textbf{Pagos:} Integración con MercadoPago, comprobantes.
+		\item \textbf{Mensajería:} Envío y recepción, validación de longitud.
+		\item \textbf{Mapas:} Búsqueda por cercanía, fallos de API externa.
+	\end{itemize}
+	
+	\subsection*{Herramientas a Utilizar}
+	\begin{itemize}
+		\item \textbf{Pytest:} Pruebas unitarias.
+		\item \textbf{Django TestCase:} Validación de vistas y modelos.
+		\item \textbf{SQLite/PostgreSQL:} Bases de prueba.
+		\item \textbf{Mock/Patch:} Simulación de servicios externos.
+		\item \textbf{Factory Boy:} Generación de datos.
+		\item \textbf{Coverage.py:} Medición de cobertura.
+	\end{itemize}
+	
+	\subsection*{Estructura del Plan de Pruebas}
+		\subsubsection*{Servicio de Cuentas}
+			\begin{itemize}
+				\item Registro válido → usuario creado y correo enviado.
+				\item Registro duplicado → error de validación.
+				\item Login exitoso → token JWT generado.
+				\item Login fallido → error 401.
+			\end{itemize}
+		
+		\subsubsection*{Servicio de Propiedades}
+			\begin{itemize}
+				\item Crear → pendiente de aprobación.
+				\item Editar → reflejo de cambios.
+				\item Moderación → cambia a estado visible.
+			\end{itemize}
+		
+		\subsubsection*{Servicio de Reservas}
+			\begin{itemize}
+				\item Reserva exitosa → disponibilidad actualizada.
+				\item Reserva fallida → acción bloqueada.
+			\end{itemize}
+		
+		\subsubsection*{Servicio de Pagos}
+			\begin{itemize}
+				\item Pago correcto → HTTP 200, comprobante generado.
+				\item Reembolso válido → estado actualizado.
+			\end{itemize}
+		
+		\subsubsection*{Servicio de Mensajería}
+			\begin{itemize}
+				\item Mensaje válido → reenviado vía WebSocket.
+				\item Exceso de caracteres → envío bloqueado.
+			\end{itemize}
+		
+		\subsubsection*{Servicio de Mapas}
+			\begin{itemize}
+				\item Coordenadas válidas → propiedades cercanas.
+				\item Error API → excepción manejada con mensaje.
+			\end{itemize}
+	
+	\subsection*{Cobertura y Técnicas}
+		\begin{itemize}
+			\item \textbf{Cobertura esperada:} Mínimo 90\% en microservicios críticos.
+			\item \textbf{Técnicas:}
+			\begin{itemize}
+				\item Particiones equivalentes.
+				\item Valores límite.
+				\item Simulación de fallos externos.
+				\item Verificación antes/después de operación.
+				\item Inyección de dependencias con mocks.
+			\end{itemize}
+		\end{itemize}
+	
+	\subsection*{Gestión y Ejecución}
+		\begin{itemize}
+			\item Automatización con Pytest.
+			\item Ejecución en CI/CD (GitHub Actions o GitLab CI).
+			\item Reportes con \texttt{coverage.py}.
+			\item Alertas automáticas ante fallos.
+		\end{itemize}

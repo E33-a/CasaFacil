@@ -1,0 +1,72 @@
+\section{Estrategia de Escalabilidad}
+	\noindent La arquitectura de CasaFácil combina escalabilidad horizontal como eje principal, vertical para casos específicos, y un enfoque híbrido para balancear rendimiento y costos.
+	
+	\subsection*{Escalabilidad Horizontal (Scale-Out)}
+		\noindent \textbf{Justificación:} Responde a picos de carga impredecibles (por ejemplo, inicio de semestre). Mejora rendimiento al distribuir la carga. \\
+		
+		\textbf{Características que lo requieren:} 
+		\begin{itemize}
+			\item Crecimiento elástico ante demanda variable.
+			\item Tolerancia a fallos (elimina puntos únicos de fallo).
+			\item Planes premium generan consultas y operaciones simultáneas.
+		\end{itemize}
+		
+		\textbf{Componentes escalados horizontalmente:}
+		\begin{itemize}
+			\item \textbf{Microservicios:}
+			\begin{itemize}
+				\item Autenticación con JWT/OAuth detrás de API Gateway.
+				\item Búsqueda con Elasticsearch y geolocalización.
+				\item Mensajería usando Redis Pub/Sub y WebSockets.
+			\end{itemize}
+			\item \textbf{Bases de datos:}
+			\begin{itemize}
+				\item PostgreSQL con réplicas de lectura.
+				\item MongoDB con sharding por colección.
+			\end{itemize}
+			\item \textbf{Alta disponibilidad:}
+			\begin{itemize}
+				\item Kubernetes con múltiples zonas de disponibilidad.
+				\item PodDisruptionBudgets y Service Discovery dinámico.
+			\end{itemize}
+		\end{itemize}
+	
+	\subsection*{Escalabilidad Vertical (Scale-Up)}
+		\noindent \textbf{Justificación:} Se usa en componentes con estado o requerimientos de consistencia fuerte. \\
+		
+		\textbf{Características que lo requieren:}
+		\begin{itemize}
+			\item Bases de datos maestras (transacciones ACID).
+			\item Servicios intensivos en RAM o IOPS.
+		\end{itemize}
+		
+		\textbf{Componentes escalados verticalmente:}
+		\begin{itemize}
+			\item PostgreSQL maestro (más CPU/RAM).
+			\item Redis con mayor capacidad de memoria.
+			\item Kafka con brokers optimizados para eventos.
+		\end{itemize}
+	
+	\subsection*{Enfoque Híbrido (Hybrid Scaling)}
+		\noindent \textbf{Justificación:} Combina lo mejor de ambos modelos.
+		
+		\begin{itemize}
+			\item \textbf{API Gateway:} Horizontal (balanceo de tráfico).
+			\item \textbf{PostgreSQL:} Vertical + horizontal (maestro y réplicas).
+			\item \textbf{Servicio de pagos:} Horizontal (procesamiento paralelo).
+		\end{itemize}
+		
+		\textbf{Ventajas:}
+		\begin{itemize}
+			\item Flexibilidad ante demanda.
+			\item Costos optimizados.
+			\item Alta disponibilidad garantizada.
+		\end{itemize}
+	
+	\subsection*{Alta Disponibilidad (99.9\%)}
+	\begin{itemize}
+		\item \textbf{Multi-AZ Deployment:} Microservicios y DBs en múltiples zonas.
+		\item \textbf{Replicación:} PostgreSQL síncrona, MongoDB asíncrona.
+		\item \textbf{Health Checks:} Kubernetes y ELB supervisan salud del sistema.
+		\item \textbf{Backups:} Snapshots automáticos (RDS, MongoDB Atlas).
+	\end{itemize}
